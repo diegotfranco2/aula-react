@@ -1,0 +1,42 @@
+#container {
+    background-color: #fafbff;
+    /* border: solid 1px #cccccc; */
+    border: solid 1px red;
+    padding-inline: 1.5rem;
+    padding-block: 0.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.trem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trem label {
+    font-size: 0.875rem;
+}
+
+/* #preco { */
+.trem span {
+    font-size: 0.75rem;
+}
+
+#qtd {
+    font-size: 0.875rem;
+    outline: 0;
+    padding-inline: 0.5rem 0.125rem;
+    padding-block: 0.25rem;
+    border: solid 1px #cccccc;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 2px rgba(40, 40, 40, 0.2);
+}
+
+#qtd:hover, #qtd:focus {
+    border: solid 1px #60A5FA;
+}
+
+#qtd:focus {
+    box-shadow: 0 0 0 1px rgb(96, 165, 250);
+}
