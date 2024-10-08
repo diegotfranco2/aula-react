@@ -13,15 +13,9 @@ type ContextType = {
 	setQuantidade: Dispatch<SetStateAction<number>>;
 };
 
-const QuantidadePrecoContext = createContext<ContextType | undefined>(undefined);
-
-export const useQuantidadePreco = () => {
-	const context = useContext(QuantidadePrecoContext);
-	if (context === undefined)
-		throw new Error("useAuth must be used within AuthProvider");
-
-	return context;
-};
+const QuantidadePrecoContext = createContext<ContextType | undefined>(
+	undefined
+);
 
 export const QuantidadePrecoProvider = ({
 	preco,
@@ -30,10 +24,23 @@ export const QuantidadePrecoProvider = ({
 	preco: number;
 } & PropsWithChildren) => {
 	const [quantidade, setQuantidade] = useState<number>(1);
+	preco = preco * quantidade;
 
 	return (
-		<QuantidadePrecoContext.Provider value={{ preco, quantidade, setQuantidade }}>
+		<QuantidadePrecoContext.Provider
+			value={{ preco, quantidade, setQuantidade }}
+		>
 			{children}
 		</QuantidadePrecoContext.Provider>
 	);
+};
+
+export const useQuantidadePreco = () => {
+	const context = useContext(QuantidadePrecoContext);
+	if (context === undefined)
+		throw new Error(
+			"useQuantidadePreco deve ser utilizado somente com QuantidadePrecoProvider"
+		);
+
+	return context;
 };
