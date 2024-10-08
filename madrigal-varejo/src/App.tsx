@@ -1,19 +1,9 @@
-
-import { useState } from 'react';
-import './App.css'
+import QtdPreco from "./components/QtdPreco/QtdPreco";
 
 function App() {
-
-const[email, setEmail] = useState("");
-console.log('valor', email)
-
-
-  return (
-  <main>
-    <label htmlFor="campoEmail">E-mail</label>
-    <input type="text" id="campoEmail" value={email} onChange={(evt) => setEmail(evt.target.value)}/>
-  </main> 
-  )
+  return ( 
+    <QtdPreco />
+  );
 }
 
-export default App
+export default App;
