@@ -1,14 +1,16 @@
 type CalculaPrecoProps = {
-  preco: number;
-  quantidade: number;
-}
+	preco: number;
+};
 
-const CalculaPreco = ({ preco, quantidade }: CalculaPrecoProps) => {
-  return (
-    <span id="preco" className="text-xs" >
-      R$ {(preco * Number(quantidade)).toLocaleString('pt-br', { minimumFractionDigits: 2 })}
-    </span>
-  );
-}
+const CalculaPreco = ({ preco }: CalculaPrecoProps) => {
+	return (
+		<span id="preco" className="text-xs text-right">
+			R${" "}
+			{preco.toLocaleString("pt-br", {
+				minimumFractionDigits: 2,
+			})}
+		</span>
+	);
+};
 
 export default CalculaPreco;

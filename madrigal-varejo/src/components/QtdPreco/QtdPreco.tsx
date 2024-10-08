@@ -1,19 +1,25 @@
 import AlteraQuantidade from "../AlteraQuantidade/AlteraQuantidade";
 import CalculaPreco from "../CalculaPreco/CalculaPreco";
 
-const QtdPreco = () => {
-  return (
-    <div className="flex flex-col gap-1 bg-snow rounded px-6 py-2 border border-silver text-neutral-800">
-      <div className="flex justify-between">
-        <label htmlFor="qtd" className="text-sm">Quantidade:</label>
-        <AlteraQuantidade />
-      </div>
-      <div className="flex justify-between">
-        <label htmlFor="preco" className="text-sm">Preço:</label>
-        <CalculaPreco preco={3.5} quantidade={1} />
-      </div>
-    </div>
-  );
-}
+type QtdPrecoProps = {
+	nome: string;
+	descricao: string;
+	preco: number;
+};
+
+const QtdPreco = ({ nome, descricao, preco }: QtdPrecoProps) => {
+	return (
+		<div className="flex bg-snow rounded px-6 py-2 border border-silver text-neutral-800">
+			<div className="flex flex-col grow">
+				<span className="text-sm">{nome}</span>
+				<p className="text-xs font-light">{descricao}</p>
+			</div>
+			<div className="flex flex-col gap-1 py-1">
+				<AlteraQuantidade />
+				<CalculaPreco preco={preco} />
+			</div>
+		</div>
+	);
+};
 
 export default QtdPreco;
