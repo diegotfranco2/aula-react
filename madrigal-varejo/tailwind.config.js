@@ -9,6 +9,12 @@ export default {
       colors:{
         snow: "#fafbff",
         silver: "#cccccc"
+      },
+      fontFamily: {
+        noto: "Noto Sans"
+      },
+      fontSize: {
+        xxs: "0.625rem"
       }
     },
   },
