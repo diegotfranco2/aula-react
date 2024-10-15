@@ -1,4 +1,4 @@
-[
+export const produtos = [
   {
     "id": 1,
     "produto": "Beans - Black Bean, Preserved",
