@@ -1,14 +1,9 @@
-import { Link, Outlet } from "react-router-dom";
-
+import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
 const Root = () => {
-  
   return (
     <>
-      <nav>
-        <Link to="/">Pagina Principal</Link>
-        <Link to="/paginaA">Pagina A</Link>
-        <Link to="/paginaB">Pagina B</Link>
-      </nav>
+      <Header />
       <Outlet />
     </>
   );

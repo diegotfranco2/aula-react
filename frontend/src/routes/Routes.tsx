@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Root from "./Root";
 import Home from "../pages/Home";
-import PaginaA from "../pages/PaginaA";
-import PaginaB from "../pages/PaginaB";
+import Login from "../pages/Login";
+import Tabela from "../pages/Tabela";
 
 const routes: RouteObject[] = [
     {
@@ -10,12 +10,12 @@ const routes: RouteObject[] = [
         element: <Home />
     },
     {
-        path: "/paginaA",
-        element: <PaginaA />
+        path: "/login",
+        element: <Login />
     },
     {
-        path: "/paginaB",
-        element: <PaginaB />
+        path: "/tabela",
+        element: <Tabela />
     }
 ];
 
