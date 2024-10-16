@@ -2,7 +2,7 @@ import { createBrowserRouter, RouteObject } from "react-router-dom";
 import Root from "./Root";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
-import Tabela from "../pages/Tabela";
+import Estoque from "../pages/Estoque";
 
 const routes: RouteObject[] = [
     {
@@ -14,8 +14,8 @@ const routes: RouteObject[] = [
         element: <Login />
     },
     {
-        path: "/tabela",
-        element: <Tabela />
+        path: "/estoque",
+        element: <Estoque />
     }
 ];
 

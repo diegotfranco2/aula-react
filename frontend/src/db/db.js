@@ -1,7 +1,7 @@
 export const produtos = [
   {
     "id": 1,
-    "produto": "Beans - Black Bean, Preserved",
+    "nome": "Beans - Black Bean, Preserved",
     "quantidade": 12,
     "preco": 749.87,
     "custo": 742.3713,
@@ -9,7 +9,7 @@ export const produtos = [
   },
   {
     "id": 2,
-    "produto": "Beef - Ground Lean Fresh",
+    "nome": "Beef - Ground Lean Fresh",
     "quantidade": 48,
     "preco": 734.84,
     "custo": 573.1752,
@@ -17,7 +17,7 @@ export const produtos = [
   },
   {
     "id": 3,
-    "produto": "Rice Pilaf, Dry,package",
+    "nome": "Rice Pilaf, Dry,package",
     "quantidade": 17,
     "preco": 494.80,
     "custo": 435.42400000000004,
@@ -25,7 +25,7 @@ export const produtos = [
   },
   {
     "id": 4,
-    "produto": "French Pastry - Mini Chocolate",
+    "nome": "French Pastry - Mini Chocolate",
     "quantidade": 84,
     "preco": 492.38,
     "custo": 369.28499999999997,
@@ -33,7 +33,7 @@ export const produtos = [
   },
   {
     "id": 5,
-    "produto": "Cranberries - Fresh",
+    "nome": "Cranberries - Fresh",
     "quantidade": 94,
     "preco": 784.58,
     "custo": 729.6594,
@@ -41,7 +41,7 @@ export const produtos = [
   },
   {
     "id": 6,
-    "produto": "Wine - Gewurztraminer Pierre",
+    "nome": "Wine - Gewurztraminer Pierre",
     "quantidade": 33,
     "preco": 368.37,
     "custo": 320.4819,
@@ -49,7 +49,7 @@ export const produtos = [
   },
   {
     "id": 7,
-    "produto": "Roe - Flying Fish",
+    "nome": "Roe - Flying Fish",
     "quantidade": 7,
     "preco": 982.27,
     "custo": 805.4614,
@@ -57,7 +57,7 @@ export const produtos = [
   },
   {
     "id": 8,
-    "produto": "Veal - Leg",
+    "nome": "Veal - Leg",
     "quantidade": 49,
     "preco": 219.15,
     "custo": 179.70300000000003,
@@ -65,7 +65,7 @@ export const produtos = [
   },
   {
     "id": 9,
-    "produto": "Bok Choy - Baby",
+    "nome": "Bok Choy - Baby",
     "quantidade": 5,
     "preco": 174.23,
     "custo": 135.89939999999999,
@@ -73,7 +73,7 @@ export const produtos = [
   },
   {
     "id": 10,
-    "produto": "Cheese - Brie, Cups 125g",
+    "nome": "Cheese - Brie, Cups 125g",
     "quantidade": 95,
     "preco": 838.88,
     "custo": 813.7135999999999,
@@ -81,7 +81,7 @@ export const produtos = [
   },
   {
     "id": 11,
-    "produto": "Papadam",
+    "nome": "Papadam",
     "quantidade": 85,
     "preco": 967.39,
     "custo": 812.6075999999999,
@@ -89,7 +89,7 @@ export const produtos = [
   },
   {
     "id": 12,
-    "produto": "Bread - Pita",
+    "nome": "Bread - Pita",
     "quantidade": 35,
     "preco": 36.65,
     "custo": 35.5505,
@@ -97,7 +97,7 @@ export const produtos = [
   },
   {
     "id": 13,
-    "produto": "Plastic Wrap",
+    "nome": "Plastic Wrap",
     "quantidade": 64,
     "preco": 95.41,
     "custo": 79.1903,
@@ -105,7 +105,7 @@ export const produtos = [
   },
   {
     "id": 14,
-    "produto": "Bagelers - Cinn / Brown",
+    "nome": "Bagelers - Cinn / Brown",
     "quantidade": 45,
     "preco": 33.27,
     "custo": 32.9373,
@@ -113,7 +113,7 @@ export const produtos = [
   },
   {
     "id": 15,
-    "produto": "Pasta - Tortellini, Fresh",
+    "nome": "Pasta - Tortellini, Fresh",
     "quantidade": 99,
     "preco": 188.58,
     "custo": 162.1788,
@@ -121,7 +121,7 @@ export const produtos = [
   },
   {
     "id": 16,
-    "produto": "Easy Off Oven Cleaner",
+    "nome": "Easy Off Oven Cleaner",
     "quantidade": 93,
     "preco": 963.54,
     "custo": 809.3735999999999,
@@ -129,7 +129,7 @@ export const produtos = [
   },
   {
     "id": 17,
-    "produto": "Glass Clear 8 Oz",
+    "nome": "Glass Clear 8 Oz",
     "quantidade": 52,
     "preco": 816.51,
     "custo": 759.3543,
@@ -137,7 +137,7 @@ export const produtos = [
   },
   {
     "id": 18,
-    "produto": "Chocolate - Milk",
+    "nome": "Chocolate - Milk",
     "quantidade": 29,
     "preco": 174.22,
     "custo": 170.7356,
@@ -145,7 +145,7 @@ export const produtos = [
   },
   {
     "id": 19,
-    "produto": "Cheese - Brie, Triple Creme",
+    "nome": "Cheese - Brie, Triple Creme",
     "quantidade": 14,
     "preco": 133.72,
     "custo": 120.348,
@@ -153,7 +153,7 @@ export const produtos = [
   },
   {
     "id": 20,
-    "produto": "Wine - Vouvray Cuvee Domaine",
+    "nome": "Wine - Vouvray Cuvee Domaine",
     "quantidade": 62,
     "preco": 451.79,
     "custo": 447.2721,
