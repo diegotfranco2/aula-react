@@ -1,4 +1,13 @@
-export const produtos = [
+export type ProdutoTipo = {
+  id: number;
+  nome: string;
+  quantidade: number;
+  preco: number;
+  custo: number;
+  lucro: number;
+}
+
+export const produtos: ProdutoTipo[] = [
   {
     "id": 1,
     "nome": "Beans - Black Bean, Preserved",
