@@ -1,19 +1,27 @@
 import { MdEdit, MdDelete } from "react-icons/md";
 import { ProdutoTipo } from "../db/db";
-import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 
 type TabelaProps = {
   headers: string[];
-  data: ProdutoTipo[];
+  dados: ProdutoTipo[];
+  setDados: Dispatch<SetStateAction<ProdutoTipo[]>>
+  setProduto: Dispatch<SetStateAction<ProdutoTipo>>;
+  setIsOpenEditar: Dispatch<SetStateAction<boolean>>;
 }
 
-const Tabela = ({ headers, data }: TabelaProps) => {
-  const [dados, setDados] = useState(data);
-
-
+const Tabela = ({ headers, dados, setDados, setProduto, setIsOpenEditar }: TabelaProps) => {
   const onRemove = (id: number) => {
     setDados((dados) => dados.filter((item) => item.id != id));
+  }
+
+  const onEdit = (id: number) => {
+    const produto = dados.find((item) => item.id == id);
+    if(produto)
+      setProduto(produto);
+    
+    setIsOpenEditar(true);
   }
 
   return (
@@ -33,12 +41,12 @@ const Tabela = ({ headers, data }: TabelaProps) => {
                 <td className="border border-purple-400 py-1 px-2 text-center">{produto.quantidade}</td>
                 <td className="border border-purple-400 py-1 px-2 text-center">{produto.preco.toLocaleString("pt-br", { style: "currency", currency: 'BRL' })}</td>
                 <td className="border border-purple-400 py-1 px-2 text-center">{produto.custo.toLocaleString("pt-br", { style: "currency", currency: 'BRL' })}</td>
-                <td className="border border-purple-400 py-1 px-2 text-center">{`${produto.lucro} %`}</td>
+                <td className="border border-purple-400 py-1 px-2 text-center">{`${produto.lucro.toLocaleString("pt-br", {maximumFractionDigits: 2})} %`}</td>
                 <td className="border border-purple-400 py-1 px-2 text-center">
                   <div className="flex justify-center items-center gap-3">
                     <MdEdit
                       className="cursor-pointer hover: text-amber-500"
-
+                      onClick={() => onEdit(produto.id)}
                     />
                     <MdDelete
                       className="cursor-pointer hover: text-red-600"
