@@ -1,5 +1,4 @@
 import { Dispatch, SetStateAction } from "react";
-import { MdClose } from "react-icons/md";
 
 type ModalProps = {
   isOpen: boolean;
