@@ -1,4 +1,10 @@
 import { Dispatch, SetStateAction } from "react";
+import CodProduto from "./CodProduto";
+import Custo from "./Custo";
+import Descricao from "./Descricao";
+import Lucro from "./Lucro";
+import Preco from "./Preco";
+import Quantidade from "./Quantidade";
 
 type ModalProps = {
   isOpen: boolean;
@@ -13,32 +19,14 @@ const Modal = ({ isOpen, setIsOpen }: ModalProps) => {
           <div id="area-conteudo" className="flex flex-col grow gap-4">
             <p className="text-xs " >Entre com as informações do produto</p>
             <div className="flex gap-2">
-              <div className="flex flex-col gap-1">
-                <label htmlFor="" className="font-semibold text-xs">Cód. Produto</label>
-                <input type="text" className="border border-slate-300 rounded outline-0 ps-2 py-0.5 text-sm" />
-              </div>
-              <div className="flex flex-col grow">
-                <label htmlFor="" className="font-semibold text-xs">Descrição</label>
-                <input type="text" className="border border-slate-300 rounded outline-0 ps-2 py-0.5 text-sm" />
-              </div>
+              <CodProduto codigo={codigo} setCodigo={setCodigo} />
+              <Descricao descricao={descricao} setDescricao={setDescricao} />
             </div>
             <div className="flex gap-2">
-              <div className="flex flex-col gap-1">
-                <label htmlFor="" className="font-semibold text-xs">Quantidade</label>
-                <input type="text" className="border border-slate-300 rounded outline-0 ps-2 py-0.5 text-sm" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label htmlFor="" className="font-semibold text-xs">Custo</label>
-                <input type="text" className="border border-slate-300 rounded outline-0 ps-2 py-0.5 text-sm" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label htmlFor="" className="font-semibold text-xs">Preço</label>
-                <input type="text" className="border border-slate-300 rounded outline-0 ps-2 py-0.5 text-sm" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label htmlFor="" className="font-semibold text-xs">% Lucro</label>
-                <input type="text" className="border border-slate-300 bg-stone-200 rounded outline-0 ps-2 py-0.5 text-sm" disabled/>
-              </div>
+              <Quantidade quantidade={quantidade} setQuantidade={setQuantidade} />
+              <Custo custo={custo} setCusto={setCusto} />
+              <Preco preco={preco} setPreco={setPreco} />
+              <Lucro valor={lucro} />
             </div>
           </div>
           <div id="area-botoes" className="flex justify-end gap-2 mt-4">
