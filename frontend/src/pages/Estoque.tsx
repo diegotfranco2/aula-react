@@ -2,11 +2,13 @@ import { useState } from "react";
 import Buscar from "../components/Buscar.tsx";
 import Modal from "../components/Modal.tsx";
 import Tabela from "../components/Tabela";
-import { produtos } from "../db/db.ts";
+import { produtos, ProdutoTipo } from "../db/db.ts";
 import { MdAdd } from "react-icons/md";
 
 const Estoque = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [dados, setDados] = useState<ProdutoTipo[]>(() => produtos);
+
   return (
     <>
       <h1>Estoque</h1>
@@ -16,8 +18,8 @@ const Estoque = () => {
           <MdAdd onClick={() => setIsOpen(true)} />
         </button>
       </div>
-      <Tabela headers={["#", "Nome", "Quantidade", "Preço", "Custo", "% Lucro", "Ações"]} data={produtos} />
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Tabela headers={["#", "Nome", "Quantidade", "Preço", "Custo", "% Lucro", "Ações"]} dados={dados} setDados={setDados}/>
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen} setDados={setDados} />
     </>
   );
 }

@@ -1,8 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
-
 type PrecoProps = {
   preco: number;
-  setPreco: Dispatch<SetStateAction<number>>
+  setPreco: (preco: number) => void;
 }
 
 const Preco = ({preco, setPreco}: PrecoProps) => {

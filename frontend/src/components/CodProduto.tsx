@@ -1,8 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
-
 type CodProdutoProps = {
   codigo: number;
-  setCodigo: Dispatch<SetStateAction<number>>
+  setCodigo: (codigo: number) => void;
 }
 
 

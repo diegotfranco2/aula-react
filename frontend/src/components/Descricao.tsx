@@ -1,8 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
-
 type DescricaoProps = {
   descricao: string;
-  setDescricao: Dispatch<SetStateAction<string>>
+  setDescricao: (descricao: string) => void;
 }
 
 const Descricao = ({ descricao, setDescricao }: DescricaoProps) => {

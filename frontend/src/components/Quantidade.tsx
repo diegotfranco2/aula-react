@@ -1,8 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
-
 type QuantidadeProps = {
   quantidade: number;
-  setQuantidade: Dispatch<SetStateAction<number>>
+  setQuantidade: (quantidade: number) => void;
 }
 
 

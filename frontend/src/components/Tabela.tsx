@@ -1,16 +1,15 @@
 import { MdEdit, MdDelete } from "react-icons/md";
 import { ProdutoTipo } from "../db/db";
-import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 
 type TabelaProps = {
   headers: string[];
-  data: ProdutoTipo[];
+  dados: ProdutoTipo[];
+  setDados: Dispatch<SetStateAction<ProdutoTipo[]>>
 }
 
-const Tabela = ({ headers, data }: TabelaProps) => {
-  const [dados, setDados] = useState(data);
-
+const Tabela = ({ headers, dados, setDados }: TabelaProps) => {
 
   const onRemove = (id: number) => {
     setDados((dados) => dados.filter((item) => item.id != id));

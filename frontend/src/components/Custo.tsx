@@ -1,8 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
-
 type CustoProps = {
   custo: number;
-  setCusto: Dispatch<SetStateAction<number>>
+  setCusto: (custo: number) => void;
 }
 
 const Custo = ({ custo, setCusto }: CustoProps) => {
