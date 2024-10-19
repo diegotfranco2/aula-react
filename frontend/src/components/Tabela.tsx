@@ -1,18 +1,26 @@
 import { MdEdit, MdDelete } from "react-icons/md";
 import { ProdutoTipo } from "../db/db";
 import { Dispatch, SetStateAction } from "react";
+import { ModalOpen } from "../pages/Estoque";
 
 
 type TabelaProps = {
   headers: string[];
   dados: ProdutoTipo[];
-  setDados: Dispatch<SetStateAction<ProdutoTipo[]>>
+  setDados: Dispatch<SetStateAction<ProdutoTipo[]>>;
+  setProduto: Dispatch<SetStateAction<ProdutoTipo>>;
+  setIsOpen: Dispatch<SetStateAction<ModalOpen>>;
 }
 
-const Tabela = ({ headers, dados, setDados }: TabelaProps) => {
+const Tabela = ({ headers, dados, setDados, setProduto, setIsOpen }: TabelaProps) => {
 
   const onRemove = (id: number) => {
     setDados((dados) => dados.filter((item) => item.id != id));
+  }
+
+  const onEdit = (id: number) => {
+    setProduto((prev) => dados.find((item) => item.id == id) ?? prev);
+    setIsOpen({open: true, editMode: true});
   }
 
   return (
@@ -37,7 +45,7 @@ const Tabela = ({ headers, dados, setDados }: TabelaProps) => {
                   <div className="flex justify-center items-center gap-3">
                     <MdEdit
                       className="cursor-pointer hover: text-amber-500"
-
+                      onClick={() => onEdit(produto.id)}
                     />
                     <MdDelete
                       className="cursor-pointer hover: text-red-600"
