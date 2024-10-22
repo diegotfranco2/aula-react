@@ -35,11 +35,23 @@ const Modal = ({ isOpen, setIsOpen, setDados, produto, setProduto }: ModalProps)
   }
   const funcaoQueAdiciona = () => {
     setDados((prev) => [...prev, produto]);
-    setIsOpen({ open: false, editMode: false });
+    funcaoQueFinaliza();
   }
   const funcaoQueEdita = () => {
     setDados((prev) => prev.map((item) => item.id != produto.id ? item : produto));
+    funcaoQueFinaliza();
+  }
+
+  const funcaoQueFinaliza = () => {
     setIsOpen({ open: false, editMode: false });
+    setProduto({
+      id: 0,
+      nome: "",
+      quantidade: 0,
+      custo: 0,
+      preco: 0,
+      lucro: 0
+    });
   }
 
   return (
@@ -62,7 +74,7 @@ const Modal = ({ isOpen, setIsOpen, setDados, produto, setProduto }: ModalProps)
           <div id="area-botoes" className="flex justify-end gap-2 mt-4">
             <button
               className="border border-red-600 text-red-600 bg-gray-50 rounded px-2 py-1 text-sm"
-              onClick={() => setIsOpen({open: false, editMode: false })}>
+               onClick={funcaoQueFinaliza}>
               Cancelar
             </button>
             {isOpen.editMode ?
